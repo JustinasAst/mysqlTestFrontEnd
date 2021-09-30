@@ -46,7 +46,7 @@ form.addEventListener("submit", (e) => {
     .then((res) => res.json())
     .then((data) => {
       if (data.err) {
-        return alert(data.err);
+        return alert("This group not exist! Try other group");
       }
       form.reset();
       setTimeout(() => {
