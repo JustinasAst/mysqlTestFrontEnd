@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+    />
+    <script defer src="script/bills.js"></script>
+  </head>
+  <body> 
+    <nav>
+      <a  id="signout" class="private" href="login.html">Sign out</a>
+      <a href="group.html">Back to group</a>
+    </nav>
+      <header> 
+          <img src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png" alt="google">
+
+          <h1>Split bill</h2>
+            
+
+      </header>
+      <table id="billsTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Description</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      
+<form id="bills" class="form">
+ 
+  <div class= "inputDiv" >
+    <h2>Add bill</h2>
+    <div>
+      <label for="amount"> Amount</label>
+      <input type="text" id="amount" name="amount" >
+  </div>
+
+  <div>
+      <label for="description"> Description</label>
+      <input type="text" id="description" name="description" >
+  
+  </div>
+  <button>Add</button>
+
+  </div>
+    
+</form>
+
+</body>
+<footer>© 2021 Groups and Bills</footer>
+</html>

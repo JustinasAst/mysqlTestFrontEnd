@@ -1,0 +1,52 @@
+img {
+  height: 100px;
+  width: 100px;
+}
+.box {
+  text-align: center;
+  background: rgb(204, 198, 198);
+  padding: 15px;
+  border-radius: 5px;
+}
+#groupbox {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+header {
+  text-align: center;
+}
+header h1 {
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+header h3 {
+  color: rgb(173, 169, 169);
+}
+
+nav a {
+  margin-left: 15px;
+}
+
+.inputDiv {
+  width: 35%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.inputDiv input {
+  width: 100%;
+}
+.inputDiv label {
+  font-weight: 700;
+}
+.link {
+  margin-top: 25px;
+}
+footer {
+  text-align: center;
+}
+.regLog {
+  margin-bottom: 0;
+}
