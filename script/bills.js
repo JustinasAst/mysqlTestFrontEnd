@@ -2,7 +2,9 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const id = urlParams.get("id");
 
-url = "http://localhost:3000/v1/accounts/bills/" + id;
+url =
+  "https://justinas-ast-mysql-test-back-end-ugmhj.ondigitalocean.app/back/v1/accounts/bills/" +
+  id;
 
 const token = window.localStorage.getItem("token");
 console.log(token);

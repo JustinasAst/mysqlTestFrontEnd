@@ -1,5 +1,7 @@
-const url = "http://localhost:3000/v1/accounts/accounts";
-const gr_url = "http://localhost:3000/v1/accounts/groups";
+const url =
+  "https://justinas-ast-mysql-test-back-end-ugmhj.ondigitalocean.app/back/v1/accounts/accounts";
+const gr_url =
+  "https://justinas-ast-mysql-test-back-end-ugmhj.ondigitalocean.app/back/v1/accounts/groups";
 
 const token = window.localStorage.getItem("token");
 console.log(token);

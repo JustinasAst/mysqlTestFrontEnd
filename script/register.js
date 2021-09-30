@@ -1,4 +1,5 @@
-url = "http://localhost:3000/v1/auth/register";
+url =
+  "https://justinas-ast-mysql-test-back-end-ugmhj.ondigitalocean.app/back/v1/auth/register";
 const form = document.getElementById("register");
 form.addEventListener("submit", (e) => {
   e.preventDefault();

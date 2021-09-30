@@ -1,4 +1,5 @@
-url = "http://localhost:3000/v1/auth/login";
+url =
+  "https://justinas-ast-mysql-test-back-end-ugmhj.ondigitalocean.app/back/v1/auth/login";
 
 const form = document.getElementById("login");
 form.addEventListener("submit", (e) => {
