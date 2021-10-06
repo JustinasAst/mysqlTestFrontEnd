@@ -42,18 +42,21 @@ form.addEventListener("submit", (e) => {
 
   const amount = e.target.elements.amount.value.trim();
   const description = e.target.elements.description.value.trim();
-  fetch("http://localhost:3000/v1/accounts/bills", {
-    method: "POST",
-    headers: {
-      "Content-type": "application/json",
-      Authorization: `Bearer ${token}`,
-    },
-    body: JSON.stringify({
-      group_id: id,
-      amount,
-      description,
-    }),
-  })
+  fetch(
+    "https://justinas-ast-mysql-test-back-end-ugmhj.ondigitalocean.app/back/v1/accounts/bills",
+    {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({
+        group_id: id,
+        amount,
+        description,
+      }),
+    }
+  )
     .then((res) => res.json())
     .then((data) => {
       billsTable();
