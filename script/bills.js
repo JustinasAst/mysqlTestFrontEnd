@@ -32,7 +32,7 @@ function billsTable() {
         td1.textContent = item.description;
 
         const td2 = tr.insertCell();
-        td2.textContent = item.amount;
+        td2.textContent = `$ ${item.amount}`;
       });
     });
 }
