@@ -2,15 +2,18 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const id = urlParams.get("id");
 
-url =
-  "https://justinas-ast-mysql-test-back-end-ugmhj.ondigitalocean.app/back/v1/accounts/bills/" +
-  id;
+const url =
+  "https://justinas-ast-mysql-test-back-end-ugmhj.ondigitalocean.app/back/v1/accounts/bills/";
+
+// url =
+//   "https://justinas-ast-mysql-test-back-end-ugmhj.ondigitalocean.app/back/v1/accounts/bills/" +
+//   id;
 
 const token = window.localStorage.getItem("token");
 console.log(token);
 
 function billsTable() {
-  fetch(url, {
+  fetch(url + id, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -42,23 +45,20 @@ form.addEventListener("submit", (e) => {
 
   const amount = e.target.elements.amount.value.trim();
   const description = e.target.elements.description.value.trim();
-  fetch(
-    "https://justinas-ast-mysql-test-back-end-ugmhj.ondigitalocean.app/back/v1/accounts/bills",
-    {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify({
-        group_id: id,
-        amount,
-        description,
-      }),
-    }
-  )
+  fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify({
+      group_id: id,
+      amount,
+      description,
+    }),
+  })
     .then((res) => res.json())
-    .then((data) => {
+    .then(() => {
       billsTable();
     })
     .catch((err) => console.log(err));
